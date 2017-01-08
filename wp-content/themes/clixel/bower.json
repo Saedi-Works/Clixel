@@ -1,0 +1,13 @@
+{
+  "name": "foundationpress",
+  "main": [
+    "assets/stylesheets/clixel.css",
+    "assets/javascript/clixel.js"
+  ],
+  "ignore": [],
+  "dependencies": {
+    "foundation-sites": "~6.3.0",
+    "fontawesome": "~4.5.0",
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}
