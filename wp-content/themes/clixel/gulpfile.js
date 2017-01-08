@@ -33,30 +33,13 @@ var PATHS = {
     'assets/components/fontawesome/scss',
   ],
   javascript: [
-    'assets/components/what-input/what-input.js',
-    'assets/components/foundation-sites/js/foundation.core.js',
-    'assets/components/foundation-sites/js/foundation.util.*.js',
 
-    // Paths to individual JS components defined below
-    // 'assets/components/foundation-sites/js/foundation.abide.js',
-    // 'assets/components/foundation-sites/js/foundation.accordion.js',
-    // 'assets/components/foundation-sites/js/foundation.accordionMenu.js',
-    // 'assets/components/foundation-sites/js/foundation.drilldown.js',
-    // 'assets/components/foundation-sites/js/foundation.dropdown.js',
-    // 'assets/components/foundation-sites/js/foundation.dropdownMenu.js',
-    // 'assets/components/foundation-sites/js/foundation.equalizer.js',
-    // 'assets/components/foundation-sites/js/foundation.interchange.js',
-    // 'assets/components/foundation-sites/js/foundation.magellan.js',
-    // 'assets/components/foundation-sites/js/foundation.offcanvas.js',
-    // 'assets/components/foundation-sites/js/foundation.orbit.js',
-    // 'assets/components/foundation-sites/js/foundation.responsiveMenu.js',
-    // 'assets/components/foundation-sites/js/foundation.responsiveToggle.js',
-    // 'assets/components/foundation-sites/js/foundation.reveal.js',
-    // 'assets/components/foundation-sites/js/foundation.slider.js',
-    // 'assets/components/foundation-sites/js/foundation.sticky.js',
-    // 'assets/components/foundation-sites/js/foundation.tabs.js',
-    // 'assets/components/foundation-sites/js/foundation.toggler.js',
-    // 'assets/components/foundation-sites/js/foundation.tooltip.js',
+    // Bootstrap Js 
+    // TODO : Babel error here while build.
+    // 'assets/components/bootstrap/js/src/alert.js',
+
+    'assets/components/tether/dist/js/tether.js',
+    'assets/components/bootstrap/dist/js/bootstrap.js',
 
     // Motion UI
     // 'assets/components/motion-ui/motion-ui.js',
@@ -104,7 +87,6 @@ gulp.task('browser-sync', ['build'], function() {
 // Compile Sass into CSS
 // In production, the CSS is compressed
 gulp.task('sass', function() {
-  // return gulp.src('assets/scss/foundation.scss')
   return gulp.src('assets/scss/clixel.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
@@ -154,7 +136,7 @@ gulp.task('javascript', function() {
   return gulp.src(PATHS.javascript)
     .pipe($.sourcemaps.init())
     .pipe($.babel())
-    .pipe($.concat('foundation.js', {
+    .pipe($.concat('clixel.js', {
       newLine:'\n;'
     }))
     .pipe($.if(isProduction, uglify))
@@ -224,7 +206,7 @@ gulp.task('clean', function(done) {
 // Clean JS
 gulp.task('clean:javascript', function() {
   return del([
-      'assets/js/foundation.js'
+      'assets/js/clixel.js'
     ]);
 });
 
