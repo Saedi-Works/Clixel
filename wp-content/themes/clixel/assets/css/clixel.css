@@ -7196,71 +7196,88 @@ a {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5em;
-      left: -999em;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
+.site-header {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  border-bottom: 1px solid #f3f3f3;
+  padding: 0 20px; }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
+.main-navigation .site-branding {
+  display: inline-block; }
+  .main-navigation .site-branding img {
+    max-height: 72px; }
 
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
+.main-navigation ul {
   float: right;
-  text-align: right;
-  width: 50%; }
+  margin: 0;
+  padding: 0; }
+  .main-navigation ul li {
+    display: inline-block;
+    list-style: none;
+    position: relative; }
+    .main-navigation ul li a {
+      display: block;
+      text-decoration: none;
+      padding: 0 14px;
+      text-transform: uppercase;
+      position: relative;
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease; }
+    .main-navigation ul li.current-menu > a,
+    .main-navigation ul li.current-menu-item a,
+    .main-navigation ul li:hover a,
+    .main-navigation ul li:focus a {
+      -webkit-box-shadow: 0 -3px 0 0 #0275d8 inset;
+              box-shadow: 0 -3px 0 0 #0275d8 inset; }
+
+/* Menu Bar */
+.menu-bar {
+  width: 80px;
+  height: 100%;
+  background-color: #fff;
+  border-right: 1px solid #f3f3f3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -ms-transform: translateX(-100px);
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  z-index: 99;
+  text-align: center;
+  -webkit-transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .menu-bar.active {
+    moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    -webkit-transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .menu-bar .ham-menu {
+    height: 80px;
+    line-height: 80px; }
+  .menu-bar .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -51px;
+    height: 53px;
+    overflow: hidden;
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -webkit-transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .menu-bar .social {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    margin-left: -8px;
+    line-height: 1.6; }
+    .menu-bar .social a {
+      display: block; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -7466,6 +7483,12 @@ object {
 
 .gallery-caption {
   display: block; }
+
+#page {
+  width: calc(100% - 80px);
+  left: 80px;
+  overflow-x: hidden;
+  position: relative; }
 
 /* Third-party libraries */
 /*!
