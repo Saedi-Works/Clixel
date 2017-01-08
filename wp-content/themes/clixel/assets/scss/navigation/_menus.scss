@@ -41,7 +41,7 @@
 /* Menu Bar */
 .menu-bar{
 	width: 80px;
-    height: 100%;
+    height: calc(100% - 65px);
     background-color: #fff;
     border-right: 1px solid #f3f3f3;
     position: fixed;

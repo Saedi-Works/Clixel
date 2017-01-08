@@ -4,3 +4,17 @@
     overflow-x: hidden;
     position: relative;
 }
+#content.site-content{
+	padding: 20px;
+	padding-bottom: 80px;
+}
+footer#colophon{
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #f3f3f3;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    padding: 20px;
+}
