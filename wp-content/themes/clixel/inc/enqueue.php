@@ -17,6 +17,8 @@ function clixel_scripts() {
 
 	wp_enqueue_style( 'clixel_theme', get_template_directory_uri() . '/assets/css/clixel.css' );
 
+	wp_enqueue_script( 'jquery');
+
 	wp_enqueue_script( 'clixel-js', get_template_directory_uri() . '/assets/js/clixel.js', array('jquery'), '20151215', true );
 
 	wp_enqueue_script( 'clixel-app-js', get_template_directory_uri() . '/assets/js/app.js', array(), '20151215', true );
