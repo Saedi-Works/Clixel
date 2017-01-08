@@ -15,7 +15,7 @@
             'data' : data_val
         },
         success:function(data) {
-            // This outputs the result of the ajax request
+            jQuery('.res').append(data + "<br/>");
             console.log(data);
         },
         error: function(errorThrown){
