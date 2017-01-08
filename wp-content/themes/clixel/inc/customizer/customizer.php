@@ -58,9 +58,17 @@ function clixel_customize_register( $wp_customize ) {
                 'title' => __( 'logo','clixel' ),
                 'priority' => 2,
                 
-                )
-            ); 
+                ));
+   $wp_customize->add_setting( 'Download');
 
+   $wp_customize->add_control(
+    'Download',
+    array(
+        'type' => 'checkbox',
+        'label' => 'Download',
+        'section' => 'theme_options',
+    )
+);
 }
 add_action( 'customize_register', 'clixel_customize_register' );
 
