@@ -79,7 +79,7 @@ add_action( 'after_setup_theme', 'clixel_setup' );
  * @global int $content_width
  */
 function clixel_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'clixel_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'clixel_content_width', 1170 );
 }
 add_action( 'after_setup_theme', 'clixel_content_width', 0 );
 
