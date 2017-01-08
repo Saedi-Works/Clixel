@@ -31,6 +31,7 @@ Thumbs.db
 design
 *.ai
 *.psd
+design/*.jpg
 
 #  Build System generated  #
 ###########################
