@@ -1,5 +1,49 @@
+#  Packages  #
+#############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+#  Logs and database  #
+#######################
 *.log
+*.sql
+*.sqlite
+
+#  OS generated files  #
+#######################
+.DS_Store?
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+#  Build System generated  #
+###########################
+*prepros.cfg
+*.sass-cache*
+node_modules/
+bower_components/
+assets/components/
+build/
+dist/
+packaged/
+wpcs/
+
+#  WordPress generated  #
+#########################
+.htaccess
+sitemap.xml
+sitemap.xml.gz
 wp-config.php
+wp-config-sample.php
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
@@ -8,11 +52,5 @@ wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
 wp-content/wp-cache-config.php
+wp-content/uploads--/
 wp-content/plugins/hello.php
-
-/.htaccess
-/license.txt
-/readme.html
-/sitemap.xml
-/sitemap.xml.gz
-
