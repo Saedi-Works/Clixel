@@ -1,28 +1,25 @@
 <?php
-function example_ajax_request() {
- 
+function ajaxdata() {
+
     // The $_REQUEST contains all the data sent via ajax
     if ( isset($_REQUEST) ) {
-     
-        $fruit = $_REQUEST['fruit'];
-         
+
+        $data = $_REQUEST['data'];
         // Let's take the data that was sent and do something with it
-        if ( $fruit == 'Banana' ) {
-            $fruit = 'Apple';
-        }
-     
-        // Now we'll return it to the javascript function
-        // Anything outputted will be returned in the response
-        echo $fruit;
-         
-        // If you're debugging, it might be useful to see what was sent in the $_REQUEST
-        // print_r($_REQUEST);
-     
+        echo $data * $data;
+
+
     }
-     
+
     // Always die in functions echoing ajax content
-   die();
+    die();
 }
- 
-add_action( 'wp_ajax_example_ajax_request', 'example_ajax_request' );
+add_action('wp_ajax_ajaxdata', 'ajaxdata');
+add_action( 'wp_ajax_nopriv_ajaxdata', 'ajaxdata' );
+
+function ajax_filters() {
+    wp_enqueue_script( 'ajax-search', get_stylesheet_directory_uri() . '/assets/js/ajax-search.js', array( 'jquery' ), '1.0.0', true );
+    wp_localize_script( 'ajax-search', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+}
+add_action( 'wp_enqueue_scripts', 'ajax_filters' );
 ?>
