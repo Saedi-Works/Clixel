@@ -1,23 +1,20 @@
-/*!
-Theme Name: Clixel
-Theme URI: http://underscores.me/
-Author: saediwork
-Author URI: https://saediworks.com/
-Description: Clixel is a wordpress theme.
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: clixel
-Tags:
+/*
+	Clixel for Sites components:
+	Import the building blocks you need for your project.
+	Reducing the number of imported components will optimize page speed.
+	---------------------------------------------------------------------
+	The Clixel framework is built by Saedi Works
+	Licensed under MIT Open Source
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+	This theme, like WordPress, is licensed under the GPL.
+	Use it to make something cool, have fun, and share what you've learned with others.
 
-Clixel is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
+	Clixel is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+	Underscores is distributed under the terms of the GNU GPL v2 or later.
 
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+	Normalizing styles have been helped along thanks to the fine work of
+	Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+
 */
 
 /*--------------------------------------------------------------
@@ -104,3 +101,22 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/* Third-party libraries */
+@import 'font-awesome';
+/* @import 'vendor/tether';*/
+
+
+/*
+  My custom styles:
+  Add your scss files below to structure your project styles
+*/
+
+/* Modules */
+/* @import "modules/navigation";*/
+
+/* Components */
+/* @import "components/buttons";*/
+
+/* Templates */
+/* @import "templates/front";*/

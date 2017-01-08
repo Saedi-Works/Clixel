@@ -1,0 +1,16 @@
+{
+    "name": "Saedi-Works/Clixel",
+    "description": "Clixel is a WordPress theme for photographers",
+    "type": "wordpress-theme",
+    "minimum-stability" : "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Saedi-Works",
+            "email": "info@saediworks.com"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

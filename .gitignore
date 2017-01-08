@@ -25,6 +25,14 @@
 ehthumbs.db
 Thumbs.db
 
+
+#  Build System generated  #
+###########################
+design
+*.ai
+*.psd
+design/*.jpg
+
 #  Build System generated  #
 ###########################
 *prepros.cfg
@@ -59,3 +67,4 @@ wp-content/themes/twentyfifteen
 wp-content/themes/twentysixteen
 wp-content/themes/resortica-lite
 wp-content/themes/optimizer
+wp-content/themes/understrap
