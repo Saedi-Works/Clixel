@@ -21,6 +21,16 @@ function clixel_scripts() {
 
 	wp_enqueue_script( 'clixel-js', get_template_directory_uri() . '/assets/js/clixel.js', array('jquery'), '20151215', true );
 
+	if(is_home() || is_front_page()){
+
+		// Testing the switch gallery
+		wp_enqueue_script( 'clixel-unitegallery-js', get_template_directory_uri() . '/assets/gridslider/js/unitegallery.min.js', array(), '20151215', true );
+		wp_enqueue_style( 'clixel-unitegallery-css', get_template_directory_uri() . '/assets/gridslider/css/unite-gallery.css');
+		wp_enqueue_script( 'clixel-unitegallery-tiles-js', get_template_directory_uri() . '/assets/gridslider/themes/tiles/ug-theme-tiles.js', array(), '20151215', true );
+		wp_enqueue_script( 'clixel-unitegallery-slider-js', get_template_directory_uri() . '/assets/gridslider/themes/slider/ug-theme-slider.js', array(), '20151215', true );
+
+	}
+
 	wp_enqueue_script( 'clixel-app-js', get_template_directory_uri() . '/assets/js/app.js', array(), '20151215', true );
 
 	if ( is_rtl() ) { 
