@@ -127,50 +127,82 @@ function clixel_customize_register( $wp_customize ) {
 ); 
 		
         
-				
-        
-		
-
-        
-		
-		
-        $wp_customize->add_section( 'socialshare_section', array(
-            'title'       => __( 'Social Share Buttons', 'optimizer' ),
+				 $wp_customize->add_section( 'socialinks_section', array(
+            'title'       => ( 'Social Links', 'clixel' ),
             'priority'    => 10,
-            'panel'       => 'singlepages_panel',
-			'description' => __( 'To view the live changes you make in this section, select a post or a page from the Top bar dropdown list located at the top right corner of the screen.', 'optimizer' ),
+            
+			
         ) );
-		
-      
-		
-        $wp_customize->add_section( 'socialinks_section', array(
-            'title'       => __( 'Social Links', 'optimizer' ),
-            'priority'    => 10,
-            'panel'       => 'misc_panel',
-			'description' => __( 'Social Bookmark Links Settings', 'optimizer' ),
-        ) );
-       
-        ) );
+     
 		
 		
 
-      
+      $wp_customize->add_setting('social_button', array(
+		'type' => 'option',
+        'default' => 'simple',
+		
+) );
+ 
+			$wp_customize->add_control(  'social_button', array(
+					'type' => 'radio-image',
+					
+					'section' => 'socialinks_section',
+					'settings' => 'social_button',
+					//'choices' => array(
+						//'simple' => array( 'url' => get_template_directory_uri().'/assets/images/social/social_simple.png', 'label' => 'Round' ),
+					
+			));
+
+
+//Social Icons Position
+
+
+
+
+//-------------------SOCIAL LINKS----------------------
+
+//Facebook URL
+$wp_customize->add_setting('facebook', array(
+	'type' => 'option',
+	'default' => '',
+	'sanitize_callback' => 'esc_url_raw',
+	
+) );
+			$wp_customize->add_control('facebook', array(
+				'type' => 'text',
+				'label' => __('LINK 1','clixel'),
+				'section' => 'socialinks_section',
+				'settings' => 'facebook',
+			) );
+
+
+//Twitter URL
+$wp_customize->add_setting('twitter', array(
+	'type' => 'option',
+	'default' => '',
+	'sanitize_callback' => 'esc_url_raw',
+	
+) );
+			$wp_customize->add_control('twitter', array(
+				'type' => 'text',
+				'label' => __('LINK 2','clixel'),
+				'section' => 'socialinks_section',
+				'settings' => 'twitter',
+			) );
 
 
 
 
 
 
-$wp_customize->remove_section( 'custom_css' );
-  
-require(get_template_directory() . '/inc/customizer/controls/settings-misc.php');
+
 
 }
 add_action( 'customize_register', 'clixel_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */f
+ */
 
 
 

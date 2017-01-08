@@ -69,6 +69,10 @@ function clixel_customize_register( $wp_customize ) {
             'priority' => 2,
 
             ));
+    require_once(get_template_directory() . '/inc/customizer/controls/settings-theme_options.php');
+require_once(get_template_directory() . '/inc/customizer/controls/settings-social.php');
+require_once(get_template_directory() . '/inc/customizer/controls/settings-logo.php');
+require_once(get_template_directory() . '/inc/customizer/controls/settings-color.php');
 }
 add_action( 'customize_register', 'clixel_customize_register' );
 
@@ -82,5 +86,4 @@ function clixel_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'clixel_customize_preview_js' );
 
-require_once(get_template_directory() . '/inc/customizer/controls/settings-theme_options.php');
-require_once(get_template_directory() . '/inc/customizer/controls/settings-social.php');
+
