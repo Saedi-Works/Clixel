@@ -14,12 +14,61 @@ function clixel_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	 $wp_customize->add_section(
+            'social_section',
+            array(
+                'title'    => __( 'Social Options','clixel' ),
+                'panel' => 'theme_options',
+                'priority' => 8,
+                )
+            );
+  $wp_customize->add_section(
+            'default_screen_section',
+            array(
+                'title'    => __( 'Default Page','clixel' ),
+      
+                'priority' => 8,
+                )
+            );
+    $wp_customize->add_section(
+            'theme_options',
+            array(
+                'title' => __( 'Theme Options','clixel' ),
+                'priority' => 2,
+                )
+            );
+    $wp_customize->add_section(
+            'widgets',
+            array(
+                'title' => __( 'Widgets','clixel' ),
+                'priority' => 2,
+                )
+            );
+   $wp_customize->add_section(
+            'Colors',
+            array(
+                'title' => __( 'Colors','clixel' ),
+                'priority' => 2,
+                'default' => '#008080',
+                )
+            ); 
+    $wp_customize->add_section(
+            'logo',
+            array(
+                'title' => __( 'logo','clixel' ),
+                'priority' => 2,
+                
+                )
+            ); 
+
 }
 add_action( 'customize_register', 'clixel_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
+ 
+
 function clixel_customize_preview_js() {
 	wp_enqueue_script( 'clixel_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
