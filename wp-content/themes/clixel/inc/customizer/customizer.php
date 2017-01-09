@@ -51,6 +51,7 @@ function clixel_customize_register( $wp_customize ) {
     $wp_customize->remove_section("colors");
     $wp_customize->remove_section("background_image");
     $wp_customize->remove_section("static_front_page");
+    $wp_customize->remove_section("header_image");
 
 
 
