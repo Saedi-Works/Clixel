@@ -6,13 +6,11 @@ $=jQuery.noConflict();
 /********************************
 Window Ready Functions
 *********************************/
-var nav = jQuery('#navigation');
+// var nav = jQuery('#navigation');
 
 ( function( $ ) {
 
   console.log('hello');
-  windowWidthFunction();
-
 
   //. Resize Function
   $( window ).resize(function() {
