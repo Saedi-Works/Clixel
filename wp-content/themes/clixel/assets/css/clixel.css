@@ -7491,7 +7491,7 @@ object {
   position: relative; }
 
 #content.site-content {
-  padding: 20px;
+  padding: 0;
   padding-bottom: 80px; }
 
 footer#colophon {
@@ -7502,7 +7502,10 @@ footer#colophon {
   bottom: 0;
   left: 0;
   z-index: 99;
-  padding: 20px; }
+  padding: 20px 80px; }
+
+footer.controls-wrap button, footer.controls-wrap .controls {
+  display: inline; }
 
 /* Third-party libraries */
 /*!
