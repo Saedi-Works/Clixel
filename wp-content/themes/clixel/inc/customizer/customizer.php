@@ -32,7 +32,12 @@ function clixel_customize_register( $wp_customize ) {
             'priority' => 18,
             )
         );
-   
+
+    $wp_customize->add_section( 'colors', array(
+       'title' => __( 'Colors' ),
+       'priority' => 40,
+       ) );
+
     $wp_customize->add_section(
         'theme_options',
         array(
@@ -47,18 +52,12 @@ function clixel_customize_register( $wp_customize ) {
             'priority' => 2,
             )
         );
-   
-    $wp_customize->add_section(
-        'logo',
-        array(
-            'title' => __( 'logo','clixel' ),
-            'priority' => 2,
 
-            ));
+
     require_once(get_template_directory() . '/inc/customizer/controls/settings-theme_options.php');
-require_once(get_template_directory() . '/inc/customizer/controls/settings-social.php');
-require_once(get_template_directory() . '/inc/customizer/controls/settings-logo.php');
-require_once(get_template_directory() . '/inc/customizer/controls/settings-color.php');
+    require_once(get_template_directory() . '/inc/customizer/controls/settings-social.php');
+    require_once(get_template_directory() . '/inc/customizer/controls/settings-logo.php');
+    require_once(get_template_directory() . '/inc/customizer/controls/settings-color.php');
 }
 add_action( 'customize_register', 'clixel_customize_register' );
 
