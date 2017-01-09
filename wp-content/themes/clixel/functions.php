@@ -132,3 +132,6 @@ require get_template_directory() . '/inc/customizer/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 require get_template_directory() . '/inc/ajax.php';
+
+remove_theme_support('custom-background');
+remove_theme_support('custom-header');
