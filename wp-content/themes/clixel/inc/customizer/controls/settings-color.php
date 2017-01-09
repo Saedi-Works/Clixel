@@ -1,5 +1,5 @@
 <?php
-$wp_customize->add_setting('your_theme_color');
+$wp_customize->add_setting('color');
 $wp_customize->add_control( 
 	new WP_Customize_Color_Control( 
 	$wp_customize, 
@@ -7,6 +7,6 @@ $wp_customize->add_control(
 	array(
 		'label'      => __( 'Text Color', 'Clixel' ),
 		'section'    => 'Colors',
-		'settings'   => 'your_theme_color',
+		'settings'   => 'color',
 	) ) 
 );

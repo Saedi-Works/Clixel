@@ -32,14 +32,7 @@ function clixel_customize_register( $wp_customize ) {
             'priority' => 18,
             )
         );
-    $wp_customize->add_section(
-        'default_screen_section',
-        array(
-            'title'    => __( 'Default Page','clixel' ),
-
-            'priority' => 18,
-            )
-        );
+   
     $wp_customize->add_section(
         'theme_options',
         array(
@@ -54,14 +47,7 @@ function clixel_customize_register( $wp_customize ) {
             'priority' => 2,
             )
         );
-    $wp_customize->add_section(
-        'Colors',
-        array(
-            'title' => __( 'Colors','clixel' ),
-            'priority' => 2,
-            'default' => '#008080',
-            )
-        ); 
+   
     $wp_customize->add_section(
         'logo',
         array(
