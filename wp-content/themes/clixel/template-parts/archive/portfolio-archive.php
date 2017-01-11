@@ -14,7 +14,7 @@
 				?>
 			</header><!-- .page-header -->
 <?php
-  $idObj = get_category_by_slug('blog'); 
+  $idObj = get_category_by_slug('fashion'); 
   $id = $idObj->term_id;
 $key_args=array(
               'post_type' => 'blog',
