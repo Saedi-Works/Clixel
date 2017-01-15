@@ -101,6 +101,7 @@ function clixel_widgets_init() {
 }
 add_action( 'widgets_init', 'clixel_widgets_init' );
 
+
 /**
  * Enqueue scripts and styles.
  */
@@ -135,3 +136,4 @@ require get_template_directory() . '/inc/ajax.php';
 
 remove_theme_support('custom-background');
 remove_theme_support('custom-header');
+

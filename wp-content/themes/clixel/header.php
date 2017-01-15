@@ -92,8 +92,10 @@
 			        'show_option_all' => 'All',
 			        'title_li' => '',
 			        'number' => 5,
-			        'current_category' => 1
-			    ) ); ?>
+			        'current_category' => 1,
+			        
+			       
+			    ) ); ?></a>
 		    </ul>
 
 		</nav>
